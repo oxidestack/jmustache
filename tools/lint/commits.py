@@ -76,7 +76,7 @@ FOOTERS = ("BREAKING-CHANGE", "Refs", "Closes", "Co-authored-by", "Signed-off-by
 # GitHub's other closing keywords: each is spelt `Closes:` here, so one footer key closes an issue.
 CLOSING = ("close", "closed", "fix", "fixes", "fixed", "resolve", "resolves", "resolved")
 # The public history's root commit, set in the commit that starts it; COMMITS_BASE overrides it.
-BASE = ""
+BASE = "6b4fe3dd43821dea18ae201d1c05447202442c9a"
 # Published commits a later rule finds, each with the rule it is exempt from: the history is not rewritten.
 EXEMPT = {}
 HEADER_MAX = 72
