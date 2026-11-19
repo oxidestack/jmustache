@@ -1,0 +1,28 @@
+[package]
+name = "jmustache"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.87"
+description = "A port of JMustache 1.16, the Mustache engine for Java, faithful to its rendering output"
+license = "BSD-3-Clause"
+repository = "https://github.com/oxidestack/jmustache"
+homepage = "https://oxidestack.github.io/jmustache/"
+documentation = "https://docs.rs/jmustache"
+readme = "README.md"
+keywords = ["mustache", "template", "jmustache"]
+categories = ["template-engine"]
+# What crates.io gets: the library, its licence and notice, the README and the changelog. The pinned
+# upstream sources, the tests and their recorded vectors, the tools, the docs and the site stay in the
+# repository.
+include = ["/src/**", "/LICENSE", "/NOTICE", "/README.md", "/CHANGELOG.md"]
+
+[lib]
+name = "jmustache"
+
+[dependencies]
+java-compat = { package = "java-compat-rs", path = "../java-compat-rs", version = "0.1.0" }
+parking_lot = "0.12"
+
+[dev-dependencies]
+serde_yaml = "0.9"
+serde_json = { version = "1", features = ["preserve_order"] }

@@ -1,0 +1,25 @@
+## [0.2.0] - YYYY-MM-DD
+
+### Action required
+
+- `strict_mode` is no longer read. A configuration that sets it sets `strict` to the same value instead. (7ded7ef)
+
+### Features
+
+- The `trim` option drops trailing whitespace from the output. (parser, 260eecb)
+
+### Bug fixes
+
+- An error raised in a nested call names the position of the call, so a caller finds it. (196529c)
+- Input that is not UTF-8 returns an error instead of a panic. (b81556c)
+- An error names the line of the input, as the Java library does. (93846ab)
+
+### Performance
+
+- An input used twice is parsed once, so using it again is faster. (6209f9b)
+
+### Other changes
+
+- The README lists every option with its default. (22d68f2)
+
+[0.2.0]: https://github.com/oxidestack/jmustache/compare/v0.1.0...v0.2.0

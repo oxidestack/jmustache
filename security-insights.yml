@@ -1,0 +1,89 @@
+# OpenSSF Security Insights (https://github.com/ossf/security-insights), schema 2.2.0: what the project says about
+# its own security, for tools and people who assess it (CLOMonitor reads it from this path).
+header:
+  schema-version: 2.2.0
+  last-updated: "2026-11-17"
+  last-reviewed: "2026-11-17"
+  url: https://raw.githubusercontent.com/oxidestack/jmustache/main/security-insights.yml
+
+project:
+  name: jmustache
+  homepage: https://github.com/oxidestack/jmustache
+  administrators:
+    - name: Vitaly Kustov
+      email: kustov.vitalik@gmail.com
+      social: https://github.com/kustov-vitalik
+      primary: true
+  repositories:
+    - name: jmustache
+      url: https://github.com/oxidestack/jmustache
+      comment: The crate, its tests and the pinned JMustache sources.
+  vulnerability-reporting:
+    reports-accepted: true
+    bug-bounty-available: false
+    policy: https://github.com/oxidestack/jmustache/blob/main/SECURITY.md
+    contact:
+      name: Vitaly Kustov
+      email: kustov.vitalik@gmail.com
+      social: https://github.com/kustov-vitalik
+      primary: true
+    comment: >-
+      Report a vulnerability through GitHub's private vulnerability reporting, on the repository's Security tab, never
+      in a public issue. Fixes go into the latest release.
+    in-scope:
+      - The template compiler and renderer.
+    out-of-scope:
+      - A vulnerability in JMustache itself, which belongs to the JMustache project.
+      - Rendering a template from an untrusted source with a context that exposes more than it should, which is a deployment decision.
+  documentation:
+    quickstart-guide: https://github.com/oxidestack/jmustache#build-and-test
+    detailed-guide: https://docs.rs/jmustache
+    code-of-conduct: https://github.com/oxidestack/jmustache/blob/main/CODE_OF_CONDUCT.md
+    support-policy: https://github.com/oxidestack/jmustache/blob/main/SECURITY.md#supported-versions
+
+repository:
+  url: https://github.com/oxidestack/jmustache
+  # repostatus.org: under active development, not yet released.
+  status: wip
+  accepts-change-request: true
+  accepts-automated-change-request: false
+  bug-fixes-only: false
+  no-third-party-packages: false
+  core-team:
+    - name: Vitaly Kustov
+      email: kustov.vitalik@gmail.com
+      social: https://github.com/kustov-vitalik
+      primary: true
+  license:
+    url: https://github.com/oxidestack/jmustache/blob/main/LICENSE
+    expression: BSD-3-Clause AND CC-BY-4.0
+  documentation:
+    contributing-guide: https://github.com/oxidestack/jmustache/blob/main/CONTRIBUTING.md
+    dependency-management-policy: https://github.com/oxidestack/jmustache/blob/main/GOVERNANCE.md#dependencies
+    governance: https://github.com/oxidestack/jmustache/blob/main/GOVERNANCE.md
+    review-policy: https://github.com/oxidestack/jmustache/blob/main/GOVERNANCE.md#how-decisions-are-made
+    security-policy: https://github.com/oxidestack/jmustache/blob/main/SECURITY.md
+  security:
+    assessments:
+      self:
+        comment: No self-assessment has been published yet.
+    champions:
+      - name: Vitaly Kustov
+        email: kustov.vitalik@gmail.com
+        social: https://github.com/kustov-vitalik
+        primary: true
+    tools:
+      - name: cargo-deny
+        type: SCA
+        comment: Licences against the CNCF allowlist, advisories, yanked and unmaintained crates, crate sources.
+        rulesets:
+          - deny.toml
+        integration:
+          adhoc: false
+          ci: true
+          release:
+    # No release has been made.
+    automated-pipeline: false
+    distribution-points:
+      - uri: https://crates.io/crates/jmustache
+        comment: The crate, once released.

@@ -1,0 +1,14 @@
+jmustache
+Copyright (c) 2026, the jmustache authors
+
+This crate is an unofficial Rust port of JMustache 1.16 (com.samskivert.mustache), https://github.com/samskivert/jmustache,
+Copyright (c) 2010, Michael Bayne, licensed under the BSD-3-Clause ("The (New) BSD License"). It is not made, endorsed or
+supported by the JMustache project or its author. The port is a derivative work, so the whole crate is under
+BSD-3-Clause; the upstream copyright notice and licence text are kept in LICENSE.
+
+The pinned JMustache sources under upstream/ (a git submodule) are stored unmodified, with their own LICENSE. The
+tests are ported from JMustache's, and read the Mustache specification's YAML files from upstream/; those files (the
+Mustache specification, https://github.com/mustache/spec, MIT, Copyright (c) 2010-2022 Mustache Contributors) keep
+the licence they carry there.
+
+The documentation of this repository is under CC-BY-4.0 (LICENSE-docs).
